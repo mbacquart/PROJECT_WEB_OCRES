@@ -65,6 +65,7 @@ const MapChart = () => {
     </Geographies>
     <Marker coordinates={[issData.longitude, issData.latitude]}>
       <circle r={4} fill="#F53" />
+      <img src={logo} alt="Logo" />;
     </Marker>
   </ComposableMap>
   < MapChart />
