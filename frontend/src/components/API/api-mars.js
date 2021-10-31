@@ -1,0 +1,1 @@
+export const API_URL = `https://api.maas2.apollorion.com/`

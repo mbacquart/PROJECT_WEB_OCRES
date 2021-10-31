@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Apod from './components/Apod';
+import PictureOfDay from './components/PictoreOfDay';
+import MarsWeather from './components/MarsWeather';
+import WhereTheIss from './components/WhereTheIss'
 
 function App() {
   return (
     <div className="App">
-      <Apod />
+      <PictureOfDay />
+      <MarsWeather />
+      <WhereTheIss />
     </div>
   );
 }
