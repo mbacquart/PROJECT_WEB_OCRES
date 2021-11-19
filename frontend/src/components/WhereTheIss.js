@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from './API/api-iss';
+import Img from './Img/Iss.png';
+
 
 import {
   ComposableMap,
@@ -54,18 +56,20 @@ const MapChart = () => {
         <p>Longitude : {issData.longitude}</p>
         <p>Altitude : {issData.altitude}</p>
         <p>Vitesse : {issData.velocity} km/h</p>
-        <p className="date">{issData.visibility}</p>
+   
       
-        <ComposableMap projectionConfig={{ scale: 147 }}>
-    <Graticule stroke="#F53" />
-    <Geographies geography={geoUrl}>
-      {({ geographies }) =>
-        geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
-      }
-    </Geographies>
+        <ComposableMap>
+      <Geographies geography={geoUrl}>
+        {({ geographies }) =>
+          geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
+        }
+      </Geographies>
     <Marker coordinates={[issData.longitude, issData.latitude]}>
-      <circle r={4} fill="#F53" />
-      <img src={logo} alt="Logo" />;
+      <circle r={6} fill="#F53" />
+ 
+
+      <img src={Img} alt="mon image" />
+    
     </Marker>
   </ComposableMap>
   < MapChart />
