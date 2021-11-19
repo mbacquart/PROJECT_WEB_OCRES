@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import PictureOfDay from './components/PictoreOfDay';
 import MarsWeather from './components/MarsWeather';
-import WhereTheIss from './components/WhereTheIss'
+import WhereTheIss from './components/WhereTheIss';
+import WhatPlanet from './components/WhatPlanet'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <PictureOfDay />
       <MarsWeather />
       <WhereTheIss />
+      <WhatPlanet />
     </div>
   );
 }
