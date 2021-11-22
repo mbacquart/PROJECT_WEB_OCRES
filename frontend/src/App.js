@@ -1,17 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PictureOfDay from './components/PictoreOfDay';
-import MarsWeather from './components/MarsWeather';
-import WhereTheIss from './components/WhereTheIss';
-import WhatPlanet from './components/WhatPlanet'
 
+import MarsWeather from './components/MarsWeather';
+
+import WhatPlanet from './components/WhatPlanet'
+import PictureDay from './components/PictureDay';
+import WhereIss from './components/WhereIss';
 function App() {
   return (
     <div className="App">
-      <PictureOfDay />
+
+    <WhereIss />
+    <PictureDay />
+
       <MarsWeather />
-      <WhereTheIss />
+    
       <WhatPlanet />
     </div>
   );
