@@ -50,10 +50,6 @@ class WhereIss extends React.Component {
       </Geographies>
     <Marker coordinates={[this.state.iss.longitude, this.state.iss.latitude]}>
       <circle r={6} fill="#F53" />
- 
-
-
-    
     </Marker>
   </ComposableMap>
 
