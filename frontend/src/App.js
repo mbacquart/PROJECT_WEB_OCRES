@@ -1,23 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-import MarsWeather from './components/MarsWeather';
 
 import WhatPlanet from './components/WhatPlanet'
 import PictureDay from './components/PictureDay';
 import WhereIss from './components/WhereIss';
 import PeopleSpace from './components/PeopleSpace';
-
+import Chart from './components/Chart';
+import Uvi from './components/Uvi';
 
 function App() {
   return (
     <div className="App">
+  <Uvi />
   <PeopleSpace />
     <WhereIss />
     <PictureDay />
 
-      <MarsWeather />
     
       <WhatPlanet />
     </div>
