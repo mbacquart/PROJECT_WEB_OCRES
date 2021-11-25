@@ -11,13 +11,14 @@ import Uvi from './components/Uvi';
 function App() {
   return (
     <div className="App">
+    <Chart />
   <Uvi />
   <PeopleSpace />
     <WhereIss />
     <PictureDay />
 
     
-      <WhatPlanet />
+    
     </div>
   );
 }

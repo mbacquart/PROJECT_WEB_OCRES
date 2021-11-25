@@ -35,9 +35,9 @@ class PeopleSpace extends React.Component {
     const key1 = keys[0]
     const key2 = keys[1]
     return (
-      <div style={{ margin: '100px' }}>
-        <h3 style={{ padding: '10px' }}>
-          there are 10 people in the space now
+      <div>
+        <h3>
+          People in space today
         </h3>
         <div style={{ display: 'flex', paddingTop: '10px' }}>
           <div>
