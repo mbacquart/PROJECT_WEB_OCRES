@@ -115,32 +115,7 @@ class Chart extends React.Component {
         '07/01/2019'
       ],
 
-      datasets: [
-        {
-          label: 'HSN',
-          fill: false,
-          borderColor: 'rgba(255, 0, 0, 0.3)',
-          borderWidth: 1,
-          pointRadius: 2,
-          data: [65, 59, 80, 81, 56, 55, 40]
-        },
-        {
-          label: 'CPX',
-          fill: false,
-          borderColor: 'rgba(0, 255, 0, 0.3)',
-          borderWidth: 1,
-          pointRadius: 2,
-          data: [70, 32, 45, 65, 87, 92, 99]
-        },
-        {
-          label: 'Total',
-          fill: false,
-          borderColor: 'blue',
-          borderWidth: 2,
-          pointRadius: 2,
-          data: [135, 91, 125, 144, 143, 143, 139]
-        }
-      ]
+      
     }
 
     var options = {

@@ -27,15 +27,19 @@ class Uvi extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          lat:
+          Latitude    
           <input type="number" value={this.state.lat} onChange={this.handleChange} />        </label>
+       <p></p>
         <label>
-          lng:
+          Longitude    
+          
           <input type="number" value={this.state.lng} onChange={this.handleLng} />        </label>
+          <p></p>
+
         <input type="submit" value="Submit" />
         <br />
 
-        {this.state?.result !== "" ? "The UVI IS:" + this.state?.result : ""}
+        {this.state?.result !== "" ? "Le rayon UV est de : " + this.state?.result : ""}
       </form>
     );
   }
