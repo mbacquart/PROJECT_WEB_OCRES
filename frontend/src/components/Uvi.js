@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Typography, TextField, Button } from '@mui/material'
 
 class Uvi extends React.Component {
   constructor(props) {
@@ -20,27 +20,69 @@ class Uvi extends React.Component {
     } catch (err) {
       console.log(err)
     }
-
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Latitude    
-          <input type="number" value={this.state.lat} onChange={this.handleChange} />        </label>
-       <p></p>
-        <label>
-          Longitude    
-          
-          <input type="number" value={this.state.lng} onChange={this.handleLng} />        </label>
+      <div style={{ width: '100%', justifyContent: 'center', alignItems: 'center' }} >
+        <Typography sx={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }} variant="h5" >UVI Index</Typography>
+        <form onSubmit={this.handleSubmit}>
+          <TextField fullWidth
+            margin="normal" variant="outlined"
+            InputProps={{
+              style: {
+                color: "white",
+                textOverflow: "ellipsis",
+              },
+            }}
+            sx={{
+              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+              {
+                borderColor: "#fff",
+              },
+              "& .MuiInputLabel-root": {
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root.Mui-focused": {
+                color: "#fff",
+              },
+            }}
+            type="number" label="Latitude" value={this.state.lat}
+            onChange={this.handleChange} />
           <p></p>
 
-        <input type="submit" value="Submit" />
-        <br />
+          <TextField fullWidth margin="normal" variant="outlined"
+            InputProps={{
+              style: {
+                color: "white",
+                textOverflow: "ellipsis",
+              },
+            }}
+            sx={{
+              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+              {
+                borderColor: "#fff",
+              },
+              "& .MuiInputLabel-root": {
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root.Mui-focused": {
+                color: "#fff",
+              },
+            }}
+            InputProps={{ style: { color: 'white', textOverflow: 'ellipsis', } }} type="number" label="Longitude" value={this.state.lng} onChange={this.handleLng} />
+          <p></p>
+          <Button fullWidth sx={{ backgroundColor: '#66FDD9', color: 'black', fontWeight: 'bold' }} type="submit" value="Submit" >
+            Check
+          </Button>
+          <br />
+          {this.state?.result !== "" ?
+            <Typography variant="subtitle" sx={{ fontWeight: 'bold', marginTop: 5, color: 'white' }} >
 
-        {this.state?.result !== "" ? "Le rayon UV est de : " + this.state?.result : ""}
-      </form>
+              Le rayon UV est de :  + {this.state?.result}
+            </Typography> : ""}
+        </form>
+      </div>
     );
   }
 }

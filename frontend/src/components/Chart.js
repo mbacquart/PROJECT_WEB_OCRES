@@ -1,8 +1,11 @@
 import React from 'react'
 import { Pie } from 'react-chartjs-2'
+import './basic.css';
+
+
 
 class Chart extends React.Component {
-  constructor () {
+  constructor() {
     super()
     this.state = {
       loading: true,
@@ -11,7 +14,7 @@ class Chart extends React.Component {
       data2: []
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     fetch(
       'https://ll.thespacedevs.com/2.0.0/launch/?format=json&offset=10&ordering=-net'
     )
@@ -40,7 +43,7 @@ class Chart extends React.Component {
     this.setState({ loading: false })
   }
 
-  render () {
+  render() {
     const datta = [
       ...(this?.state?.data ? this?.state?.data : []),
       ...(this?.state?.data1 ? this?.state?.data1 : []),
@@ -115,12 +118,16 @@ class Chart extends React.Component {
         '07/01/2019'
       ],
 
-      
+
     }
 
     var options = {
       legend: {
-        position: 'right',
+        // responsive: true,
+        maintainAspectRatio: false,
+        // scaleShowValues: true,
+        position: 'chartArea',
+        // display:false,
         labels: {
           boxWidth: 10
         }
@@ -128,7 +135,10 @@ class Chart extends React.Component {
       scales: {
         xAxes: [
           {
-            ticks: { display: false }
+            ticks: {
+              display: false,
+              autoSkip: false
+            }
           }
         ]
       }
@@ -147,11 +157,11 @@ class Chart extends React.Component {
       return <div>loading...</div>
     } else {
       return (
-        <div style={{ height: '800px', width: '800px' }}>
+        <div>
           <Pie data={pieData} options={options} />
         </div>
       )
     }
   }
 }
-export default Chart
+export default Chart;
