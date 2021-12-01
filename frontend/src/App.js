@@ -19,7 +19,7 @@ function App() {
     //   <PictureDay />
     //   < WhatPlanet />
     // </div>
-
+ 
     <Box sx={{ backgroundColor: '#303030' }}>
       <Grid container spacing={2} sx={{ padding: '20px' }}>
         <Grid item xs={12} sm={6} md={4} lg={4}>

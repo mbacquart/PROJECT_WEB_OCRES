@@ -1,19 +1,31 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require('express');
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+const app = express();
 
-var app = express();
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+require('dotenv/config');
 
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(bodyParser.json());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
-module.exports = app;
+// IMPORT OUTES
+const postsRoute = require('./routes/posts')
+
+app.use('/posts', postsRoute)
+
+
+// ROUTES
+app.get('/', (req, res) => {
+    res.send('we are on home');
+  });
+
+// CONNECT TO DB
+mongoose.connect(process.env.DB_CONNECTION, () => 
+    console.log('connected to DB !')
+);
+
+
+
+
+app.listen(3001);
