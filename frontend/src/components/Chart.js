@@ -107,19 +107,9 @@ class Chart extends React.Component {
       '#99E6E6',
       '#6666FF'
     ]
-    const data = {
-      labels: [
-        '01/01/2019',
-        '02/01/2019',
-        '03/01/2019',
-        '04/01/2019',
-        '05/01/2019',
-        '06/01/2019',
-        '07/01/2019'
-      ],
+    
 
-
-    }
+    
 
     var options = {
       legend: {
