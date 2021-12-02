@@ -7,7 +7,7 @@ export default class WhatPlanet extends React.Component {
   };
 
   async componentDidMount() {
-    const url = "http://localhost:3001/posts";
+    const url = "http://localhost:3002/posts";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({ people: data, loading: false });
