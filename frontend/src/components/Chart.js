@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pie } from 'react-chartjs-2'
-import './basic.css';
+import { Typography, Box, Avatar } from '@mui/material'
 
 
 
@@ -148,6 +148,7 @@ class Chart extends React.Component {
     } else {
       return (
         <div>
+         <Typography sx={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }} variant="h5" >Lasts 30 rockets launched</Typography>
           <Pie data={pieData} options={options} />
         </div>
       )

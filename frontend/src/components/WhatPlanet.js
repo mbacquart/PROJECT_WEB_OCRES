@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography, Box, Avatar } from '@mui/material'
 
 export default class WhatPlanet extends React.Component {
   state = {
@@ -26,10 +27,21 @@ export default class WhatPlanet extends React.Component {
 
     return (
       <div>
+       <Typography sx={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }} variant="h5" >Breaking News</Typography>
         {this.state.people.map(person => (
           <div key={person.title}>
-            <div>{person.title}</div>
-            <div>{person.description}</div>
+
+
+            <Typography sx={{ color: 'red', fontWeight: 'bold', textAlign: 'center', fontSize: '16px',marginTop:2 }} variant="subtitle" >
+          {person.title}
+        </Typography>
+        < br/>
+        <Typography sx={{ color: 'white', textAlign: 'center', fontSize: '16px',marginTop:2 }} variant="subtitle" >
+          {person.description}
+        </Typography>
+        <br />
+
+
             <br />
 
 
